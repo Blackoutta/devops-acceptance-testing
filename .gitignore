@@ -1,0 +1,8 @@
+*.log
+.idea
+.vscode
+format.json
+# add by qinya
+v1
+logs
+.DS_Store
