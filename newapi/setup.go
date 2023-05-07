@@ -2,10 +2,11 @@ package newapi
 
 import (
 	"fmt"
+
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/conf"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/conf"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 type SetupParams struct {

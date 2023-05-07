@@ -5,15 +5,15 @@ import (
 	"os"
 	"time"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/grpc"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/pods"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/vm"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/grpc"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/pods"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/vm"
 
 	"github.com/common-nighthawk/go-figure"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/artifact"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/build"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/pipeline"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/artifact"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/build"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/pipeline"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
 )
 
 func main() {

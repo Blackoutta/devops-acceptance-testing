@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/common-nighthawk/go-figure"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/vm"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
 	"os"
+
+	"github.com/common-nighthawk/go-figure"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/vm"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
 )
 
 func main() {

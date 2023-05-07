@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/req"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/conf"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/req"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/conf"
 )
 
 type CreateTest struct {

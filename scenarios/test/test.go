@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/newapi"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/conf"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/newapi"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/conf"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 type TestFeatureTest struct {
@@ -70,7 +70,7 @@ func (t *TestFeatureTest) Run() {
 	t.Send(newapi.CreateDockerCredential{
 		Description: "this is a docker credential",
 		Name:        "docker_cred_" + random.ShortGUID(),
-		Password:    "Iot@10086",
+		Password:    "",
 		ProjectId:   t.projectID,
 		Type:        "DOCKER",
 		UserName:    "jenkins",

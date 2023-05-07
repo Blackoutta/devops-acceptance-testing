@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/errors"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/param"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/errors"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/param"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 func RunArtifactTest(exitChan chan assertion.TestResult) {

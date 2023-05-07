@@ -1,4 +1,4 @@
-module gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1
+module gitlab.blackoutta.com //devops-acceptance-testing/v1
 
 go 1.13
 

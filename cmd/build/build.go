@@ -3,12 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
+
 	"github.com/Blackoutta/profari"
 	"github.com/common-nighthawk/go-figure"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/build"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
-	"os"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/build"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
 )
 
 var teardown = flag.Bool("skip-teardown", false, "prevent the test suite from tearing down")

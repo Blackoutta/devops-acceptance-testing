@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/errors"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/errors"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/req"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/req"
 )
 
 func DeleteVMGroup(c http.Client, vmGroupID int) (GeneralResp, req.Record) {
@@ -448,7 +448,7 @@ func EditPipelineWithUnitTestAndCheckpoint(c http.Client, pipelineID int, projec
         "type": "MANUAL"
     },
     "steps": [{
-        "body": "{\"address\":\"http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git\",\"credentialId\":%v,\"authPolicy\":\"CREDENTIAL\",\"specificBranch\":\"smoke_build\",\"branchPolicy\":\"SPECIFIC_BRANCH\",\"useTag\":\"NOT\",\"useBranch\":\"NOT\",\"language\":\"GOLANG\",\"image\":\"hub.iot.chinamobile.com/library/golang:1.12.5\",\"cmd\":\"cd uploadme && go test -v\",\"coverage\":0,\"timeout\":\"180\"}",
+        "body": "{\"address\":\"http://gitlab.blackoutta.com/devops-test-httpserver.git\",\"credentialId\":%v,\"authPolicy\":\"CREDENTIAL\",\"specificBranch\":\"smoke_build\",\"branchPolicy\":\"SPECIFIC_BRANCH\",\"useTag\":\"NOT\",\"useBranch\":\"NOT\",\"language\":\"GOLANG\",\"image\":\"hub.iot.chinamobile.com/library/golang:1.12.5\",\"cmd\":\"cd uploadme && go test -v\",\"coverage\":0,\"timeout\":\"180\"}",
         "type": "UNIT_TEST",
         "name": "单元测试"
     },
@@ -945,8 +945,8 @@ func GetDockerCredential(c http.Client, projectId int, name string) req.Record {
 func CreateDockerCredential(c http.Client, projectID int, name string) req.Record {
 	j := fmt.Sprintf(`{
 	"name": "%v",
-	"userName": "jenkins",
-	"password": "Iot@10086",
+	"userName": "",
+	"password": "",
 	"type": "DOCKER",
 	"projectId": %v
 }`, name, projectID)
@@ -972,8 +972,8 @@ func GetGitCredential(c http.Client, projectId int, name string) req.Record {
 func CreateGitCredential(c http.Client, projectID int, name string) req.Record {
 	j := fmt.Sprintf(`{
 	"name": "%v",
-	"userName": "huyangyi",
-	"password": "199221hyy",
+	"userName": "",
+	"password": "",
 	"type": "GIT",
 	"projectId": %v
 }`, name, projectID)
@@ -1016,7 +1016,7 @@ func CreateArtifactLibrary(c http.Client, name string, projectID int) req.Record
 }
 
 func CreateBuild(c http.Client, name string, projectID int) req.Record {
-	body := strings.NewReader(fmt.Sprintf(`{"source":{"projectId":"%v","authPolicy":"NOAUTH","type":"GIT","address":"http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git","branchPolicy":"SPECIFIC_BRANCH","specificBranch":"smoke_build"},"buildType":"GOLANG","name":"%v","projectId":"%v"}`, projectID, name, projectID))
+	body := strings.NewReader(fmt.Sprintf(`{"source":{"projectId":"%v","authPolicy":"NOAUTH","type":"GIT","address":"http://gitlab.blackoutta.com/devops-test-httpserver.git","branchPolicy":"SPECIFIC_BRANCH","specificBranch":"smoke_build"},"buildType":"GOLANG","name":"%v","projectId":"%v"}`, projectID, name, projectID))
 	r := req.ComposeNewRequest(http.MethodPost, "build/", nil, body)
 	resp := req.SendRequestAndGetResponse(c, r)
 	return resp
@@ -1030,7 +1030,7 @@ func DuplicateBuild(c http.Client, name string, buildID int) req.Record {
 }
 
 func CreateGrpcBuild(c http.Client, name string, projectID int) req.Record {
-	body := strings.NewReader(fmt.Sprintf(`{"source":{"projectId":"%v","authPolicy":"NOAUTH","type":"GIT","address":"http://gitlab.onenet.com/huyangyi/devops-grpc-test-server.git","branchPolicy":"SPECIFIC_BRANCH","specificBranch":"master"},"buildType":"GOLANG","name":"%v","projectId":"%v"}`, projectID, name, projectID))
+	body := strings.NewReader(fmt.Sprintf(`{"source":{"projectId":"%v","authPolicy":"NOAUTH","type":"GIT","address":"http://gitlab.blackoutta.com/devops-grpc-test-server.git","branchPolicy":"SPECIFIC_BRANCH","specificBranch":"master"},"buildType":"GOLANG","name":"%v","projectId":"%v"}`, projectID, name, projectID))
 	r := req.ComposeNewRequest(http.MethodPost, "build/", nil, body)
 	resp := req.SendRequestAndGetResponse(c, r)
 	return resp
@@ -1042,7 +1042,7 @@ func CreateVMBuild(c http.Client, name string, projectID int) req.Record {
         "projectId": "%v",
         "authPolicy": "NOAUTH",
         "type": "GIT",
-        "address": "http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git",
+        "address": "http://gitlab.blackoutta.com/devops-test-httpserver.git",
         "branchPolicy": "SPECIFIC_BRANCH",
         "specificBranch": "smoke_build"
     },
@@ -1163,7 +1163,7 @@ func EditBuild(c http.Client, gitCredentialID int, dockerCredentialID, projectID
 		"updatedAt": 1578569808,
 		"deletedAt": 0,
 		"type": "GIT",
-		"address": "http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git",
+		"address": "http://gitlab.blackoutta.com/devops-test-httpserver.git",
 		"authPolicy": "CREDENTIAL",
 		"credentialId": %v,
 		"branchPolicy": "SPECIFIC_BRANCH",
@@ -1241,7 +1241,7 @@ func EditGrpcBuild(c http.Client, gitCredentialID int, dockerCredentialID, proje
 		"updatedAt": 1578569808,
 		"deletedAt": 0,
 		"type": "GIT",
-		"address": "http://gitlab.onenet.com/huyangyi/devops-grpc-test-server.git",
+		"address": "http://gitlab.blackoutta.com/devops-grpc-test-server.git",
 		"authPolicy": "CREDENTIAL",
 		"credentialId": %v,
 		"branchPolicy": "SPECIFIC_BRANCH",
@@ -1298,7 +1298,7 @@ func EditVMBuild(c http.Client, projectID int, buildID int, buildName string, so
         "updatedAt": 1583981339,
         "deletedAt": 0,
         "type": "GIT",
-        "address": "http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git",
+        "address": "http://gitlab.blackoutta.com/devops-test-httpserver.git",
         "authPolicy": "NOAUTH",
         "credentialId": null,
         "branchPolicy": "SPECIFIC_BRANCH",

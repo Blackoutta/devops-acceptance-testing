@@ -2,12 +2,13 @@ package common
 
 import (
 	"fmt"
-	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/newapi"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
 	"os"
 	"time"
+
+	"github.com/Blackoutta/profari"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/newapi"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 type CommonCoreTest struct {
@@ -107,9 +108,9 @@ func (t *CommonCoreTest) Run() {
 		VmMachineId: t.VmMachineId,
 		AuthType:    "PASSWORD",
 		Description: "no description",
-		Ip:          "10.12.7.2",
-		Name:        "app-10.12.7.2",
-		Password:    "123456",
+		Ip:          "",
+		Name:        "",
+		Password:    "",
 		Port:        3306,
 		SshKey:      "",
 		UserName:    "root",

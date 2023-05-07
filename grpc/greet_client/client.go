@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/grpc/greetpb"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/grpc/greetpb"
 
 	"google.golang.org/grpc"
 )

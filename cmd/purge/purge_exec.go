@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/purge"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/purge"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
 )
 
 var teardown bool

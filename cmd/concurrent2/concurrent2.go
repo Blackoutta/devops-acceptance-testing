@@ -6,11 +6,11 @@ import (
 	"os"
 
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/common"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/order"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/probe"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/test"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/common"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/order"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/probe"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/test"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
 )
 
 var teardown = flag.Bool("skip-teardown", false, "prevent the test suite from tearing down")

@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/conf"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/errors"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/conf"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/errors"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 func RunManualTest(exitChan chan assertion.TestResult) {

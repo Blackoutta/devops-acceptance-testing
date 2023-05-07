@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/Nerzal/gocloak/v4"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/errors"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/errors"
 )
 
 var (

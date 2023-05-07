@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"time"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/req"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/errors"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/param"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/prep"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/req"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/errors"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/param"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/prep"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 func RunVmTest(exitChan chan assertion.TestResult) {
@@ -151,9 +151,9 @@ func RunVmTest(exitChan chan assertion.TestResult) {
 	// 关联主机组ID
 	sp.VMGroupID = gen.Data
 
-	// TODO 创建两个主机
-	ip1 := "10.12.6.12"
-	ip2 := "10.12.6.13"
+	// 创建两个主机
+	ip1 := ""
+	ip2 := ""
 	gen, resp = API.CreateVM(c, ip1, 22, "app", "rX8O60lGgSQK!%ey", sp.VMGroupID, "PASSWORD")
 	ast.AssertSuccess("创建虚拟机"+ip1, gen.ErrorInfo, resp)
 
@@ -166,11 +166,11 @@ func RunVmTest(exitChan chan assertion.TestResult) {
 	// 关联主机2的ID
 	//vmTwoID := gen.Data
 
-	// TODO 检查主机连通性
+	// 检查主机连通性
 	gen, resp = API.CheckVMStatus(c, sp.VMGroupID)
 	ast.AssertSuccess("检查主机连通性", gen.ErrorInfo, resp)
 
-	// TODO 创建应用
+	// 创建应用
 	// 创建一个应用
 	sp.AppName = fmt.Sprintf("app-%v", random.ShortGUID())
 	resp = API.CreateApp(c, sp.ProjectID, sp.UserID, sp.AppName)

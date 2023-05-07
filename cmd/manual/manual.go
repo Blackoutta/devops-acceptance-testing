@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/common-nighthawk/go-figure"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/scenarios/manual"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/scenarios/manual"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
 )
 
 func main() {

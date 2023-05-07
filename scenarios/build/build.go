@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/Blackoutta/profari"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/API"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/newapi"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/random"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/API"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/newapi"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/random"
 )
 
 type BuildTest struct {
@@ -52,7 +52,7 @@ func (t *BuildTest) Run() {
 			AuthPolicy:     newapi.AuthPolicyCREDENTIAL,
 			CredentialId:   t.GitID,
 			Type:           "GIT",
-			Address:        "http://gitlab.onenet.com/huyangyi/devops-test-httpserver.git",
+			Address:        "http://gitlab.blackoutta.com/devops-test-httpserver.git",
 			BranchPolicy:   newapi.BranchPolicySpecific,
 			SpecificBranch: "smoke_build",
 		},

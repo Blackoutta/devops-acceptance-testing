@@ -2,11 +2,12 @@ package assertion
 
 import (
 	"fmt"
-	"github.com/common-nighthawk/go-figure"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/req"
 	"log"
 	"strings"
 	"time"
+
+	"github.com/common-nighthawk/go-figure"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/req"
 )
 
 type Assertion struct {

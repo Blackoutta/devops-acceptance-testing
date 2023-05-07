@@ -9,8 +9,8 @@ import (
 	"os"
 	"time"
 
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/assertion"
-	"gitlab.onenet.com/huyangyi/devops-acceptance-testing/v1/util/param"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/assertion"
+	"gitlab.blackoutta.com/devops-acceptance-testing/v1/util/param"
 )
 
 func SetupTest(suiteName string) (*os.File, *assertion.Assertion, *param.SuiteParams, http.Client) {
